@@ -186,31 +186,43 @@ namespace Calc
 
         private void BResult_Click(object sender, RoutedEventArgs e)
         {
-            if (preop != 4 && Convert.ToDouble(L1.Content) != 0)
+            if (preop != 4)
             {
-                secondoperand = Convert.ToDouble(L1.Content);
+                if(preop == 3 && L1.Content == "0")
+                {
+                    L3.Content = "На нуль ділити не можна.";
+                    L2.Content = "Введіть перший операнд:";
 
-                string res = $"{firstoperand} {Preop[preop]} {secondoperand} = ";
+                    firstoperand = secondoperand = result = 0;
+                    preop = 4;
+                }
+                else
+                {
+                    secondoperand = Convert.ToDouble(L1.Content);
 
-                GetFirstOpValue(preop);
-                result = firstoperand;
+                    string res = $"{firstoperand} {Preop[preop]} {secondoperand} = ";
 
-                res += result.ToString();
-                L3.Content = res;
-                ShowHistory(res);
+                    GetFirstOpValue(preop);
+                    result = firstoperand;
 
-                L1.Content = "0";
-                L2.Content = "Результат:";
+                    res += result.ToString();
+                    L3.Content = res;
+                    ShowHistory(res);
 
-                firstoperand = secondoperand = 0;
-                preop = 4;
+                    L1.Content = "0";
+                    L2.Content = "Результат:";
+
+                    firstoperand = secondoperand = 0;
+                    preop = 4;
+                }
+                
             }
-            else
-            {
-                L3.Content = "На нуль ділити не можна.";
-                firstoperand = secondoperand = result = 0;
-                preop = 4;
-            }
+            //else
+            //{
+            //    L3.Content = "На нуль ділити не можна.";
+            //    firstoperand = secondoperand = result = 0;
+            //    preop = 4;
+            //}
         }
         
         private void GetButtonValue(string num)
