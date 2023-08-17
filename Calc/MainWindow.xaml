@@ -16,11 +16,23 @@
         <Button x:Name="B7" Content="7" HorizontalAlignment="Left" Height="25" Margin="30,280,0,0" VerticalAlignment="Top" Width="25" Click="B7_Click"/>
         <Button x:Name="B8" Content="8" HorizontalAlignment="Left" Height="25" Margin="70,280,0,0" VerticalAlignment="Top" Width="25" Click="B8_Click"/>
         <Button x:Name="B9" Content="9" HorizontalAlignment="Left" Height="25" Margin="110,280,0,0" VerticalAlignment="Top" Width="25" Click="B9_Click"/>
-        <Button x:Name="B10" Content="+/-" HorizontalAlignment="Left" Height="25" Margin="30,320,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button x:Name="B11" Content="0" HorizontalAlignment="Left" Height="25" Margin="70,320,0,0" VerticalAlignment="Top" Width="25"/>
-        <Button x:Name="B12" Content="," HorizontalAlignment="Left" Height="25" Margin="110,320,0,0" VerticalAlignment="Top" Width="25"/>
-        <Label x:Name="L1" Content="" HorizontalAlignment="Left" Height="40" Margin="30,139,0,0" VerticalAlignment="Top" Width="250"/>
-        <Label x:Name="L2" Content="" HorizontalAlignment="Left" Height="40" Margin="30,78,0,0" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="B10" Content="+/-" HorizontalAlignment="Left" Height="25" Margin="30,320,0,0" VerticalAlignment="Top" Width="25" Click="B10_Click"/>
+        <Button x:Name="B11" Content="0" HorizontalAlignment="Left" Height="25" Margin="70,320,0,0" VerticalAlignment="Top" Width="25" Click="B11_Click"/>
+        <Button x:Name="B12" Content="," HorizontalAlignment="Left" Height="25" Margin="110,320,0,0" VerticalAlignment="Top" Width="25" Click="B12_Click"/>
+        <Label x:Name="L1" Content="" HorizontalAlignment="Left" Height="40" Margin="30,140,0,0" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="L2" HorizontalAlignment="Left" Height="50" Margin="30,20,0,0" VerticalAlignment="Top" Width="250" Background="{x:Null}"/>
+        <Button x:Name="Op1" Content="+" HorizontalAlignment="Left" Height="25" Margin="200,200,0,0" VerticalAlignment="Top" Width="50" Click="Op1_Click"/>
+        <Button x:Name="Op2" Content="-" HorizontalAlignment="Left" Height="25" Margin="200,240,0,0" VerticalAlignment="Top" Width="50" Click="Op2_Click"/>
+        <Button x:Name="Op3" Content="*" HorizontalAlignment="Left" Height="25" Margin="200,280,0,0" VerticalAlignment="Top" Width="50" Click="Op3_Click"/>
+        <Button x:Name="Op4" Content="/" HorizontalAlignment="Left" Height="25" Margin="200,320,0,0" VerticalAlignment="Top" Width="50" Click="Op4_Click"/>
+        <Label x:Name="L3" Content="" HorizontalAlignment="Left" Margin="30,90,0,0" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="BResult" Content="=" HorizontalAlignment="Left" Margin="200,360,0,0" VerticalAlignment="Top" Height="30" Width="115" Click="BResult_Click"/>
+        <Label x:Name="L4" Content="History:" HorizontalAlignment="Left" Height="337" Margin="454,24,0,0" VerticalAlignment="Top" Width="300"/>
+        <Button x:Name="BSin" Content="Bin" HorizontalAlignment="Left" Height="25" Margin="265,200,0,0" VerticalAlignment="Top" Width="50" Click="BSin_Click"/>
+        <Button x:Name="BHex" Content="Hex" HorizontalAlignment="Left" Margin="265,240,0,0" VerticalAlignment="Top" Height="25" Width="50" Click="BCos_Click"/>
+        <Button x:Name="BClear" Content="Clear" HorizontalAlignment="Left" Height="30" Margin="30,360,0,0" VerticalAlignment="Top" Width="105" Click="BClear_Click"/>
+        <Button x:Name="BOct" Content="Oct" HorizontalAlignment="Left" Margin="265,280,0,0" VerticalAlignment="Top" Height="25" Width="50" Click="BOct_Click"/>
+        <Button x:Name="Delete" Content="&lt;=" HorizontalAlignment="Left" Height="25" Margin="265,320,0,0" VerticalAlignment="Top" Width="50" Click="Delete_Click"/>
 
     </Grid>
 </Window>
