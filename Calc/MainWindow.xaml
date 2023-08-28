@@ -28,11 +28,15 @@
         <Label x:Name="L3" Content="" HorizontalAlignment="Left" Margin="30,90,0,0" VerticalAlignment="Top" Width="250"/>
         <Button x:Name="BResult" Content="=" HorizontalAlignment="Left" Margin="200,360,0,0" VerticalAlignment="Top" Height="30" Width="115" Click="BResult_Click"/>
         <Label x:Name="L4" Content="History:" HorizontalAlignment="Left" Height="337" Margin="454,24,0,0" VerticalAlignment="Top" Width="300"/>
-        <Button x:Name="BSin" Content="Bin" HorizontalAlignment="Left" Height="25" Margin="265,200,0,0" VerticalAlignment="Top" Width="50" Click="BSin_Click"/>
-        <Button x:Name="BHex" Content="Hex" HorizontalAlignment="Left" Margin="265,240,0,0" VerticalAlignment="Top" Height="25" Width="50" Click="BCos_Click"/>
+        <Button x:Name="BSin" Content="Sin" HorizontalAlignment="Left" Height="25" Margin="330,200,0,0" VerticalAlignment="Top" Width="50" Click="BSin_Click"/>
+        <Button x:Name="BHex" Content="Cos" HorizontalAlignment="Left" Margin="330,240,0,0" VerticalAlignment="Top" Height="25" Width="50" Click="BCos_Click"/>
         <Button x:Name="BClear" Content="Clear" HorizontalAlignment="Left" Height="30" Margin="30,360,0,0" VerticalAlignment="Top" Width="105" Click="BClear_Click"/>
         <Button x:Name="BOct" Content="Oct" HorizontalAlignment="Left" Margin="265,280,0,0" VerticalAlignment="Top" Height="25" Width="50" Click="BOct_Click"/>
         <Button x:Name="Delete" Content="&lt;=" HorizontalAlignment="Left" Height="25" Margin="265,320,0,0" VerticalAlignment="Top" Width="50" Click="Delete_Click"/>
+        <Button x:Name="Bin" Content="Bin" HorizontalAlignment="Left" Height="25" Margin="265,200,0,0" VerticalAlignment="Top" Width="50" Click="Bin_Click"/>
+        <Button x:Name="BHex1" Content="Hex" HorizontalAlignment="Left" Height="25" Margin="265,240,0,0" VerticalAlignment="Top" Width="50" Click="BHex1_Click"/>
+        <Button x:Name="BTan" Content="Tan" HorizontalAlignment="Left" Height="25" Margin="330,280,0,0" VerticalAlignment="Top" Width="50" Click="BTan_Click"/>
+        <Button x:Name="Btanh" Content="Tanh" HorizontalAlignment="Left" Height="25" Margin="330,320,0,0" VerticalAlignment="Top" Width="50" Click="Btanh_Click"/>
 
     </Grid>
 </Window>

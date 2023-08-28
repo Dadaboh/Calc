@@ -198,22 +198,29 @@ namespace Calc
                 }
                 else
                 {
-                    secondoperand = Convert.ToDouble(L1.Content);
+                    try
+                    {
+                        secondoperand = Convert.ToDouble(L1.Content);
 
-                    string res = $"{firstoperand} {Preop[preop]} {secondoperand} = ";
+                        string res = $"{firstoperand} {Preop[preop]} {secondoperand} = ";
 
-                    GetFirstOpValue(preop);
-                    result = firstoperand;
+                        GetFirstOpValue(preop);
+                        result = firstoperand;
 
-                    res += result.ToString();
-                    L3.Content = res;
-                    ShowHistory(res);
+                        res += result.ToString();
+                        L3.Content = res;
+                        ShowHistory(res);
 
-                    L1.Content = "0";
-                    L2.Content = "Результат:";
+                        L1.Content = "0";
+                        L2.Content = "Результат:";
 
-                    firstoperand = secondoperand = 0;
-                    preop = 4;
+                        firstoperand = secondoperand = 0;
+                        preop = 4;
+                    }
+                    catch
+                    {
+                        L2.Content = "Введіть другий операнд:";
+                    }
                 }
                 
             }
@@ -243,7 +250,78 @@ namespace Calc
             L4.Content += $"\n{res}";
         }
 
+        #region Trigonometry
         private void BSin_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double value = Convert.ToDouble(L1.Content);
+                double sin = Math.Sin(value);
+                L2.Content = "";
+                string res = $"Sin {value} = {sin}";
+                ShowHistory(res);
+                L3.Content = res;
+            }
+            catch
+            {
+                L2.Content = "Має бути вказане число.";
+            }
+        }
+
+        private void BCos_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double value = Convert.ToDouble(L1.Content);
+                double cos = Math.Cos(value);
+                L2.Content = "";
+                string res = $"Cos {value} = {cos}";
+                ShowHistory(res);
+                L3.Content = res;
+            }
+            catch
+            {
+                L2.Content = "Має бути вказане число.";
+
+            }
+        }
+        private void BTan_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double value = Convert.ToDouble(L1.Content);
+                double tan = Math.Tan(value);
+                L2.Content = "";
+                string res = $"Tan {value} = {tan}";
+                ShowHistory(res);
+                L3.Content = res;
+            }
+            catch
+            {
+                L2.Content = "Має бути вказане число.";
+            }
+        }
+
+        private void Btanh_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double value = Convert.ToDouble(L1.Content);
+                double tanh = Math.Tanh(value);
+                L2.Content = "";
+                string res = $"Tanh {value} = {tanh}";
+                ShowHistory(res);
+                L3.Content = res;
+            }
+            catch
+            {
+                L2.Content = "Має бути вказане число.";
+            }
+        }
+        #endregion
+
+        #region BinHexOct
+        private void Bin_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -260,12 +338,12 @@ namespace Calc
             }
         }
 
-        private void BCos_Click(object sender, RoutedEventArgs e)
+        private void BHex1_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 int value = Convert.ToInt32(L1.Content);
-                string hex = Convert.ToString(value, 16); 
+                string hex = Convert.ToString(value, 16);
                 L2.Content = "";
                 string res = $"{value} в Hex системі: {hex}";
                 ShowHistory(res);
@@ -274,9 +352,7 @@ namespace Calc
             catch
             {
                 L2.Content = "Має бути вказане ціле число.";
-
             }
-
         }
 
         private void BOct_Click(object sender, RoutedEventArgs e)
@@ -296,6 +372,7 @@ namespace Calc
 
             }
         }
+        #endregion
 
         private void BClear_Click(object sender, RoutedEventArgs e)
         {
@@ -315,5 +392,9 @@ namespace Calc
                 L1.Content = tmpres.Substring(0, tmpres.Length - 1);
             }  
         }
+
+
+
+
     }
 }
